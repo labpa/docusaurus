@@ -4,6 +4,4 @@ slug: /
 ---
 
 # Wilkommen
-zu meiner Docusaurus Github-Pages-Site auf der ich ein paar Mitschriften hoste.
-
-![Alt text](vscode-remote://bienensteinp.de/home/docusaurus/static/img/R0002351.JPG)
+Beispiel für einen Blog
