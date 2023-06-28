@@ -1,10 +1,10 @@
 {
-  "name": "mitschrift",
+  "name": "docusaurus",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "mitschrift": "mitschrift",
-    "start": "mitschrift start --port 5500 --host 0.0.0.0" ,
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start --port 5500 --host 0.0.0.0" ,
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
