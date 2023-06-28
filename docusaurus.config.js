@@ -15,7 +15,7 @@ const config = {
   //staticDirectories: ['static'],
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.IS_LOCAL ? '/' : '/mitschrift/',
+  baseUrl: process.env.IS_LOCAL ? '/' : '/docusaurus/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
