@@ -67,12 +67,12 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          {
+          /*{
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
-          },
+            label: 'Seite zwei',
+          },*/
          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
