@@ -26,3 +26,6 @@
 |User Experience UX, Nutzererlebnis||
 |Nutzerzentrierte Entwicklung||
 |Usability-Engineering||
+
+## Benötigte Kentnisse zu Usability und zur Experience
+![Alt text](./img/kentnisse.png)
