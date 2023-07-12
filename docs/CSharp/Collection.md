@@ -1,4 +1,4 @@
-# C#
+# Collection
 ## Datentypen in C#
 |Datentyp|Anwendung|Wertebereich|Speicherplatz|
 |---|---|---|---|

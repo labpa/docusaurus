@@ -1,4 +1,4 @@
-# Objektorientierte Programmierung mit C#
+# C-Sharp
 
 + Prezedurale Programmierung: 
     + Variablen für die Speicherung
