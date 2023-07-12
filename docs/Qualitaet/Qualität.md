@@ -19,18 +19,13 @@ Das erforderte Produkt, die den Kunden anforderungen entsprechen, eine hohe Wirt
     + Veränderungen der Technologien, Forschung und Wissenschaft, Industrie und Infrastrukturen
     + Know-how wird transparenter und zugänglicher
 ### Qualität und ihre Eigenschaften
-<br>
-
 ![Alt text](img/eigenschaften.png)
 
 + Qualität ist nichts Absolutes
 + Qualität ist keine physikalische Größe
 + Qualität ist kein binärer Begriff
 
-
 ![Alt text](img/einfluss.png)
-
-
 ### Normen
 Um eindeutige Aussagen über nahezu jegliche vom Menschen geplante Tätigkeiten und daraus resultierende Ergebnisse zu erzielen, werden Begriffe mit eindeutigen Benennungen und Beschreibungen benötigt.
 
