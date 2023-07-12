@@ -6,13 +6,8 @@
 
 + Objektorientierte Programmierung:
     + Variablen und Prozeduren (Methoden) werden in Klassen zusammengefasst.
-    
-    |Bezeichnung|Preis|Menge|
-    |---|---|---|
-    ||||
 
 Ausgangspunkt bei der Programmierung: Daten die gespeichert werden sollen.
-
 
 1. Programmaufbau  
 --> was gibt es im Programm
