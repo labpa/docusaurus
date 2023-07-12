@@ -22,7 +22,7 @@
 + Vielzahl unterscheidlicher Notationen
 + Beispiel:
     + Chen-Notation von Peter Chen, 1976
-    + ![Alt text](./img/Chen.png)
+![Alt text](./img/Chen.png)
 
 ## Kardinalitäten
 ### 1:1
