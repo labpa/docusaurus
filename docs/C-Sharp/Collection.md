@@ -15,24 +15,6 @@
 |float|Speicherung eienr Gleitkommazahl mit einfacher Genauigkeit (7 Nachkommastellen)|kleinster Wert: ca. -3,403E+38 größter Wert: ca. 3,403E+38|4 Byte|
 |char|Speicherung eines Zeichens|ein belibiges Zeichen der Tastatur|2 Byte|
 |string|Speicherung einer Zeichenkette|ein beliebiger Text|abhängig von der Anzahl der Zeichen in der Zeichenkette|
-
-## Eingabe in C#
-|Entwurf|Umsetzung|
-|---|---|
-|bool variable;<br>Eingabe variable;| bool variable; <br>bool.TryParse(Console.ReadLine(), out variable);|
-|byte variable;<br> Eingabe variable;|byte variable;<br> byte.TryParse(Console.ReadLine(), out variable);|
-|short variable;<br>Eingabe variable;| short variable;<br> short.TryParse(Console.ReadLine(), out variable);|
-|int variable; <br>Eingabe variable;|int variable;<br> int.TryParse(Console.ReadLine(), out variable);|
-|long variable;<br> Eingabe variable;|long variable;<br> long.TryParse(Console.ReadLine(), out variable);|
-|ushort variable;<br> Eingabe variable;|ushort variable;<br> ushort.TryParse(Console.ReadLine(), out variable);|
-|uint variable;<br> Eingabe variable;|uint variable;<br> uint.TryParse(Console.ReadLine(), out variable);|
-|ulong variable;<br>Eingabe ulong;|ulong variable;<br>ulong.TryParse(Console.ReadLine(), out variable);|
-|decimal variable;<br> Eingabe variable;| decimal variable;<br> decimal.TryParse(Console.ReadLine(), out variable);|
-|double variable;<br>Eingabe variable;|double variable;<br> double.TryParse(Console.ReadLine(), out variable);|
-|float variable; Eingabe variable;<br>|float variable;<br> float.TryParse(Console.ReadLine(), out variable);|
-|char variable;<br>Eingabe variable;|char variable;<br>char.TryParse(Console.ReadLine(), out variable);|
-|string text;<br> Eingabe text;|string text;<br> text = Console.ReadLine();|
-
 ## Operatoren in C#
 |Operator|Description|
 |---|---|
@@ -55,7 +37,6 @@ while(index<4)
 {
     Console.WriteLine()
 }
-
 ```
 
 
