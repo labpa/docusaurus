@@ -1,34 +1,34 @@
 # JS-Hero Lösungen
 
 ## Aufgabe 1 Variablen
-```JS
+```js
 let vorname = 'Franz';
 ```
 ## Aufgabe 2 Was ist x
-```JS
+```js
     'Josefine'
 ```
 ## Aufgabe 3 Mehrere Variablen
-```JS
+```js
     let blume ='Rose';
     let tier = 'Käfer';
 ```
 ## Aufgabe 4 Neuzuweisung
-```JS
+```js
     'Gregor'
 ```
 ## Aufgabe 5 Variablen zuweisen:
-```JS
+```js
 'grün'
 ```
 ## Aufgabe 6 Funktionen
-```JS
+```js
 function hallo(){
     return 'Hallo Welt!';   
 }
 ```
 ## Aufgabe 7 Mehrere Funktionen
-```JS
+```js
 function a(){
     return 'Hallo a!';
 }
@@ -71,7 +71,7 @@ function welcome(Ada){
 }
 ```
 ## Aufgabe 14 Was ist x?
-```JS
+```js
 'Wo ist Fred?'
 ```
 ## Aufgabe 15 Was ist x?
@@ -103,13 +103,13 @@ function rufe(Werder){
 'Mainz bleibt Mainz'
 ```
 ## Aufgabe 20 String: length
-```JS
+```js
 function laenge(Franz){
 return Franz.length
 }
 ```
 ## Aufgabe 21 String: toUpperCase()
-```JS
+```js
 function toCase(ida){
 let klein = ida.toLowerCase();
 let gross = ida.toUpperCase();
@@ -117,7 +117,7 @@ return klein + '-' + gross;
 }
 ```
 ## Aufgabe 22 String: charAt()
-```JS
+```js
 function abkuerzung(Hansestadt, Bremen){
  let erste = Hansestadt.charAt(0);
  let zweite = Bremen.charAt(0);
@@ -125,14 +125,14 @@ return erste + zweite;
 }
 ```
 ## Aufgabe 23 String: trim()
-```JS
+```js
 function firstChar(Rosa){
 let trim = Rosa.trim();
 return trim.charAt(0);
 }
 ```
 ## Aufgabe 25 String: indexOf(), 2. Parameter
-```JS
+```js
 function secondIndexOf(eins, zwei){
  let n1 = eins.indexOf(zwei);
 
@@ -140,14 +140,14 @@ return eins.indexOf(zwei, n1 +1);
 }
 ```
 ## Aufgabe 26 String: substr()
-```JS
+```js
 function firstWord(der){
  let fred = der.indexOf(' ');
  return der.substr(0, fred);
 }
 ```
 ## Aufgabe 27 String: replace()
-```JS
+```js
 function convert(DatumEnglisch) {
  let DatumDeutsch = DatumEnglisch.replace('-', '.');
  DatumDeutsch = DatumDeutsch.replace('-', '.');
@@ -157,7 +157,7 @@ function convert(DatumEnglisch) {
 }
 ```
 ## Aufgabe 28 Zahlen
-```JS
+```js
 function add(eins, zwei){
 return eins + zwei;
 }
@@ -167,32 +167,32 @@ return eins + zwei;
 7
 ```
 ## Aufgabe 30 Fahrenheit
-```JS
+```js
 function toFahrenheit(celsius){
 return 1.8 * celsius + 32;
 }
 ```
 ## Aufgabe 31 Modulo
-```JS
+```js
 function einer(plus){
    return plus % 10;
 }
 ```
 ## Aufgabe 32 Klammern
-```JS 
+```js
 function mittelwert(eins, zwei){
 return (eins+zwei)/2
 }
 ```
 ## Aufgabe 33 Math
-```JS
+```js
 function hypotenuse(cola, bier){
 let quadrat = Math.pow(cola, 2) + Math.pow(bier, 2);
 return Math.sqrt(quadrat);
 }
 ```
 ## Aufgabe 34 Min und Max
-```JS
+```js
 function bereichsmittel(eins, zwei, molle){
     let min = Math.min(eins, zwei, molle);
     let max = Math.max(eins, zwei, molle);
@@ -200,26 +200,26 @@ function bereichsmittel(eins, zwei, molle){
 }
 ```
 ## Aufgabe 35 Math.PI
-```JS
+```js
 function flaeche(leti){
 let rquadrat = leti * leti;
 return rquadrat * Math.PI;
 }
 ```
 ## Aufgabe 36 Runden
-```JS
+```js
 function round100(eins){
     return Math.round(eins / 100)*100
 }
 ```
 ## Aufgabe 37 Zufallszahlen
-```JS
+```js
 function dice(){
     return Math.ceil(Math.random()*6);
 }
 ```
 ## Aufgabe 38 parseInt()
-```JS
+```js
 function add(mal){
 let n1 = parseInt(mal, 10);
 let plus= mal.indexOf('+');
@@ -230,7 +230,7 @@ return test;
 }
 ```
 ## Aufgabe 39 Number: toString() 
-```JS
+```js
 function digitLength(zahl){
 str = zahl.toString();
 number = str.replace('.',',');
@@ -238,7 +238,7 @@ return number.length;
 }
 ```
 ## Aufgabe 40 Number: toFixed()
-```JS
+```js
 function toEuro(money){
     kommaStelle = money.toFixed(2);
     numberInGerman = kommaStelle.replace('.',',');
@@ -246,32 +246,32 @@ function toEuro(money){
 }
 ```
 ## Aufgabe 41 Warheitswerte
-```JS
+```js
 function nand(idk, kp){
  let und = idk && kp;
  return !und;
 }
 ```
 ## Aufgabe 42 NOR
-```JS
+```js
 function nor(a, b){
     return !(a||b)
 }
 ```
 ## Aufgabe 43 XOR
-```JS
+```js
 function xor(h, c){
   return h && !c || !h && c;
 }
 ```
 ## Aufgabe 44 Strikte Gleichheit
-```JS
+```js
 function gleich(eins, zwei){
     return eins === zwei;
 }
 ```
 ## Aufgabe 45 Drei gleiche Werte
-```JS
+```js
 function equals(a,b,c){
     let eins = a === b;
     let zwei = b === c;
@@ -279,13 +279,13 @@ function equals(a,b,c){
 }
 ```
 ## Aufgabe 46 Gerade Zahlen
-```JS
+```js
 function isEven(eins){
     return eins % 2 === 0;
 }
 ```
 ## Aufgabe 47 Strikte Ungleichheit
-```JS
+```js
 function unequal(a, b, c){
  let eins= a !== b;
  let zwei= a !== c;
