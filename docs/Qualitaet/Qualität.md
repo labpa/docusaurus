@@ -123,12 +123,8 @@ Abhängig von:
 ![Alt text](img/ketteQualitaetssicherung.png)
 
 ### Kano Modell
-![Alt text](img/kano.PNG)
-
 
 ### Audit Ablaufplan
-![Alt text](img/ablaufplan.PNG)
-
 
 ##### Typische Fragen
 + Wozu dient ein Audit?  
