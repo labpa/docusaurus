@@ -106,19 +106,19 @@ Abhängig von:
 |Zertifizierung|Auditierung des QM-System|
 
 ### Ablauf der Zertifizierung
-+ Erstinformationen über den Zertifizierer &darr;
++ Erstinformationen über den Zertifizierer
     + Leistungsspektrum
     + Angebot kalkulieren
     + Auftragserteilung / Vertrag
-+ Systemanalyse &darr;
++ Systemanalyse
     + Vorbereitung des QM-Systems
     + Prüfung und Beurteilung der QM-System-Dokumentation
     + Erläuterung von erkannten Schwachstellen
     + Erstellung und Abstimmung des Zeitplanes für das Zertifizierungsaudit
-+ Voraudit &darr;
++ Voraudit
     + Beurteilung gemeinsam festlegender Bereich / Prozesse
     + Kurzbericht, Handlungsbedarf und Verbesserungspotenziale aufzeigen
-+ Zertifizierungsaudit &darr;
++ Zertifizierungsaudit
     + Umfassende Prüfung und Bewertung des QM-Systems
     + Auditbereich: Feststellung von Abweichungen
     + Korrekturmaßnahmen durch das Unternehmen
