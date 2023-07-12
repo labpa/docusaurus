@@ -11,7 +11,7 @@ Entwicklung dieser CRM-Anwendung umgesetzt werden müssen, und nennen Sie
 jeweils zwei konkrete Schritte, um diese Privilegien zu realisieren.
 
 
-Systeminformationen:
+### Systeminformationen:
 + Die CRM-Anwendung wird webbasiert entwickelt und wird von Mitarbeitern über
 verschiedene Geräte wie Desktop-Computer, Laptops und mobile Endgeräte
 genutzt.
@@ -35,6 +35,7 @@ Aktivitäten der Benutzer, Systemereignisse und Sicherheitsvorfälle zu
 überwachen und zu protokollieren
 
 
+## Aufgabe:
 Ihre Aufgabe besteht darin, die Umsetzung der Secure Design Principles in der CRM-
 Anwendung zu analysieren und jeweils zwei konkrete Schritte für die Realisierung der
 folgenden Privilegien zu identifizieren:
@@ -44,12 +45,36 @@ folgenden Privilegien zu identifizieren:
 + Secure by Default (sicherheitstechnisch voreingestellt):
 + No Security by Obscurity (keine Sicherheit durch Verschleierung)
 
-## Least Privilege (geringste Privilegien):
+## Antworten:
 
-## Defense in Depth (mehrstufige Verteidigung):
+### Least Privilege
++ Benutzerrollen definieren mit entsprechenden geringstnötigen Privilegien. Administratoren, Vertriebsmitarbeiter, Kundendienstmitarbeiter und 
+Teamleiter.
++ Zugriffskontrolle implementieren. z.B. Rollenbasierte oder Attribut-basierte Zugriffskontrolle.
++ Berechtigungen für Zugriff auf Sensible Daten (z.B. Kundendaten) benötigt
++ Infrastruktur: Systeme bekommen nur erforderlichen Zugriffsrechte. (z.B. DB whitelist only app-server can talk to it)
 
-## Fail-Safe (ausfallsichere Voreinstellungen):
+### Defense in Depth
++ Netzwerksicherheit nutzen: z.B: Firewall, IDS, IPS, Anomalie-erkennungs-Systeme...
++ Whitelisting, Blacklisting. (z.B. DB can only be reached from IP:port of app-server)
++ Verschlüsselung von Kommunikation (SSL TLS)
++ Verschlüsselung von Daten (Passwörter salted hashed)
++ Inputvalidierung
++ Content Security Policies
 
-## Secure by Default (sicherheitstechnisch voreingestellt):
+### Fail-Safe (ausfallsichere Voreinstellungen):
++ while endlosschleife die den prozess wieder startet wenn er ausfällt
 
-## No Security by Obscurity (keine Sicherheit durch Verschleierung)
+### Secure by Default (sicherheitstechnisch voreingestellt):
++ Verschlüsselte Kommunikation
++ Deaktivierung von nicht benötigten Diensten / Features
++ Benutzerkonten ohne Passwörter dürfen nicht aktiv sein
++ automatisches patchen (nicht durch nutzer angestoßen)
++ Session-Timeout
++ ID-Templates (???)
+
+### No Security by Obscurity (keine Sicherheit durch Verschleierung)
++ offene Sicherheitsarchitektur nutzen, keine proprietären Sicherheitsprotokolle
++ Pen-Test durchführen lassen
++ öffentliche Kryptografische verfahren
++ nur weil die URL nicht direkt einsehbar ist, ist sie nicht nicht aufrufbar
