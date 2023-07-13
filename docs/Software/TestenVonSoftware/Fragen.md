@@ -21,5 +21,8 @@ Bei Unit-Tests werden kleine Einheiten getestet. In der Regel handelt es sich be
 ## Wie kann man sicherstellen, dass die Tests die Qualität der Anwendung sicherstellen?
 
 ## Was ist der Unterschied zwischen White-Box- und Black-Box-Tests in der Entwicklungsphase?
-
+Abnahme Tests werden meistens als Black-Box Tests durchgeführt.
+White-Box Tests helfen bei der Implementierung Fehler festzustellen
 ## Was ist der Unterschied zwischen Verifikation und Validierung in der Entwicklungsphase?
+Verifikation prüft obn die Anforderungen eines Produkts erfüllt sind
+Valid. Prüft ob das Ergebniss auch das Ergebnis liefert, dass 

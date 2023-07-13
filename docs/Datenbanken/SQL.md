@@ -30,5 +30,5 @@ DROP DATABASE datenbankname;
 
 ### Vorhandene Tabellen anzeigen
 ```sql
-SHOW TABLES 
-´´´
+SHOW TABLES;
+```
