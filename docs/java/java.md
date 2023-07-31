@@ -10,16 +10,12 @@
     - linker
 - cmd -> javac
 
-## cmd
-![Alt text](./img/cmd.PNG)
-+ Compilieren über die Eingabeaufforderung
-
-
 ## JAVA 
+### Erstes Programm
+- Ordner erstellen in C -> Dateien
 - Notepad++
-![Alt text](./img/erstes.PNG)
 
-```java
+```Java
 public class Programm
 {
 	public static void main(String... args)
@@ -29,4 +25,27 @@ public class Programm
 }
 ```
 
+![Alt text](./img/erstes.PNG)  
 Alles in einer Klasse -> Klasse öffentlich
+
+### Eingabeaufforderung cmd
+![Alt text](./img/cmd.PNG)  
++ Compilieren über die Eingabeaufforderung (cmd)
+```
+javac Programm.java
+```
++ Ausführen cmd
+```
+java Programm
+```
++ alles anzeigen 
+```
+dir
+```
+
+## Konsolenanwendungen
++ Pakete
+    + Klasse 
+        + eine public class steht in einer Datei. Der name der Datei entspricht dem Namen der Klasse
+        + Abstrakte Klassen / Oberklassen
+    + Interfaces / functional Interfaces
