@@ -195,3 +195,17 @@ Scanner cmd = new Scanner(System.in); //Datenstrom zu Standardeingabe
 ```java
 cmd.close();
 ```
+
+## Zählen
+```java
+		//Ausgabe der Anzahl aller Bücher mit Auflage >8000
+		int count = 0;
+		for(int i = 0; i < anzahl; i++)
+		{
+			if(tabelle[i].getAuflage() > 8000)
+			{
+				count++;
+			}
+		}
+		System.out.println("Anzahl Auflage > 8000: " + count);
+```
