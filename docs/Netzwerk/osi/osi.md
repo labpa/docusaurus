@@ -39,21 +39,53 @@
 
 ## 4. Transportschicht - Transport Layer
 ### Aufgabe
++ Segmentiert vom sendenden Host-System empfangene Daten und setzt dieße auf dem System des empfangenen Host wider zu einem Transport Datenstrom zusammen.
+    + Realisierung eines zuverlässigen Datentransport zwischen zwei Hosts
++ Virtuelle Verbindungen werden aufgebaut, verwaltet und ordnungsgemäß beendet
++ Transportfehler werden erkannt und behoben
++ Datenfluss wird gesteuert
 
 ### Protokolle
 + **TCP**
 + **UDP**
 + SPX
 
-## 3 Vermittlungsschicht
+## 3 Vermittlungsschicht - Network Layer
 ### Aufgabe
-### Protokolle
++ Verbindungsaufbau und Pfadauswahl (Routing) zwischen zwei Hostsystemen
++ Sicherstellung Adressierung der Zielsysteme (IP-Adressen)
 
-## 2. Sicherungsschicht
+### Protokolle
++ **IP**
++ **IP sec**
++ **ICMP**
++ IPX
+
+## 2. Sicherungsschicht - Data Link Layer
 ### Aufgabe
-### Protokolle
++ Zuverlässige Übertragung der Daten über eine physikalische Verbindung
++ physikalische Adressierung (MAC Adressen)
++ Netztopologie
++ Netzzugang
++ benachrichtigung bei Fehlern
++ Übertragung der Frames in der richtigen Reihenfolge
++ Flusskontrolle
 
-## 1. Bitübertragungsschicht
+### Protokolle
++ **Ethernet**
++ IEEE 802.3 / 802.2
++ ATM
++ HDLC
+
+## 1. Bitübertragungsschicht - Physical Layer
 ### Aufgabe
-### Protokolle
++ Definiert die elektrischen, mechanischen, prozeduralen und funktionalen Spezifikationen für die Aktivierung, Aufrechterhaltung und Deaktivierung der physikalischen Verbindungen zwischen End-systemen. 
++ Spannungspegel
++ Datenrate
++ Entfernung
++Anschlüsse
 
+### Protokolle
++ EIA/TIA 232
++ RJ45
++ NRZ
