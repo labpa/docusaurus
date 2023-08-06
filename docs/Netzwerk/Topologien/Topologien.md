@@ -1,3 +1,7 @@
-# Netzwerktopologien
+# Netzwerk-Topologie
 
-## saifnbuiwdjsnc
+## Peer-to-Peer
+
+
+## Client-Server
+
