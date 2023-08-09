@@ -188,12 +188,14 @@ public class Programm {
 ## Datenstrom eingabe
 - Datenstrom zu Standardeingabe
 ```java
-Scanner cmd = new Scanner(System.in); //Datenstrom zu Standardeingabe
-```
-
-- Datenstrom schließen
-```java
-cmd.close();
+	public static void eingabe()
+	{
+		System.out.println("Eingabe: ");
+		Scanner cmd = new Scanner (System.in);
+		 String beispiel = cmd.nextLine();
+		 cmd.close();
+		 System.out.println("Hier wird der eingegebene Text ausgegeben: " + beispiel);
+	}
 ```
 
 ## Zählen
@@ -208,4 +210,11 @@ cmd.close();
 			}
 		}
 		System.out.println("Anzahl Auflage > 8000: " + count);
+```
+
+```php
+<?php
+$test = 0;
+
+?>
 ```
