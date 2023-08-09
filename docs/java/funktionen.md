@@ -79,3 +79,28 @@ Ausgabe Fläche Rechteck
 		System.out.println("Ihr Lohn: " + lohn + " Eur");
 	}
 ```
+
+## Summe - while
++ Bedingungsgesteuerte Schleife
+
+```java
+	//Summe aus 10 eingegebenen Zahlen wird gebildet
+	public static void summe()
+	{
+		int zahl, anzahl = 0, summe = 0;
+		
+		while(anzahl < 10)
+		{
+			System.out.println("Zahl: ");
+			Scanner cmd = new Scanner(System.in);
+			zahl = cmd.nextInt();
+			cmd.close();
+			summe = summe + zahl;
+			anzahl ++;
+		}
+		System.out.println("Summe: " + summe);
+	}
+```
+
+
+
