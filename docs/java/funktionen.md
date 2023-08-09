@@ -102,5 +102,44 @@ Ausgabe Fläche Rechteck
 	}
 ```
 
+## Fahrkarte - Noch nicht fertig!
+
+```java
+public static void fahrkarte()
+	{
+		double grundpreis = 2;
+		
+		System.out.println("Ticket auswaehlen: t - w - m");
+		Scanner cmd = new Scanner(System.in);
+		String taste = cmd.nextLine();
+		cmd.close();
+		if( taste == "t")
+		{
+			System.out.println("Grundpreis: " + grundpreis);
+		}
+		else
+		{
+			if( taste =="w")
+			{
+				grundpreis = grundpreis * 7;
+				System.out.println("Wochenpreis: " + grundpreis);
+			}
+			else
+			{
+				if( taste == "m")
+				{
+					grundpreis = grundpreis * 30;
+					System.out.println("Monatspreis; " + grundpreis);
+				}
+				else
+				{
+					System.out.println("Fehler");
+				}
+			}
+		}
+	}
+```
+
+
 
 
