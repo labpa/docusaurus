@@ -7,7 +7,7 @@ src -> new -> Package
 ### Erstellen Klasse
 
 ## Main
-```Java
+```java
 package start; //
 import inhalt.Funki; //import von inhalt.Funki
 
@@ -28,7 +28,7 @@ public class Programm {
 ```
 
 ## Funktion
-```Java
+```java
 public static void beispiel4() // Funktion
 	{
 		int stunden;

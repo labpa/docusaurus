@@ -687,7 +687,6 @@ In der FensterBestellung.xaml.cs Tragen wir folgendes ein:
         <Button Click="btnCancel_Click" Content="Abbrechen" Name="btnCancel" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150"/>
         <Button Click="btnOk_Click" Content="Bestellen" Name="btnOk" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150"/>
     </Grid>
-
 ```
 Anschliesend Ist das Fenster Bestellen wir folgt aufgeteilt: 
 
