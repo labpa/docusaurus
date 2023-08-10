@@ -212,9 +212,19 @@ public class Programm {
 		System.out.println("Anzahl Auflage > 8000: " + count);
 ```
 
-```php
-<?php
-$test = 0;
+## Constructor chaining
 
-?>
-```
+```java
+	public Artikel(int aid, String bezeichnung, double preis, int menge) 
+	{
+		this(bezeichnung, preis, menge);	//Constructor Chaining
+		this.aid = aid;
+	}
+	
+	public Artikel(String bezeichnung, double preis, int menge) 
+	{
+		this.bezeichnung = bezeichnung;
+		this.preis = preis;
+		this.menge = menge;
+	}
+``` 
