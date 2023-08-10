@@ -297,7 +297,7 @@ static void Main(string[] args)
 
 2. Wir fügen eine Klasse mit der Bezeichnung Essen hinzu
 
-```C#
+```c#
     public class Essen
     {
         public int eid { get; set; }
@@ -315,7 +315,7 @@ using Newtonsoft.Json
 ```
 
 4. Liste erstellen
-```C#
+```c#
 //wir erstellen eine leere Liste
                 List<Essen> liste = new List<Essen>();
 
@@ -332,7 +332,7 @@ using Newtonsoft.Json
 
 Für Später
 
-```C#
+```c#
         //diese Methode soll eine Verbindung zum WebServer herstellen
         //das Php-Skript ausführen
         //Ergebnis ausgeben
@@ -370,7 +370,7 @@ Für Später
 ```
 Klasse für Später
 
-```C#
+```c#
 namespace TestHttpJSON
 {
     public class Essen
