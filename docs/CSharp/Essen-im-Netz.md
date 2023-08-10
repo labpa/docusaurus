@@ -499,7 +499,7 @@ und in der SQL Abfrage wird um das bild ergänzt.
 	$sql = "select eid, bezeichnung, preis, bemerkung, bild from essen";
 ```
 
-## C#
+## csharp
 ### Hinzufügen Klasse bild
 Die Klasse bild muss hinzugefügt werden:
 ```C#
@@ -649,7 +649,7 @@ In der MainWindow.xaml wird der Doppelklick hinzugefügt
 
 In die MainWindow.xaml.cs kommt eine Messagebox hinzu sieht aus wie folgendes:
 
-```C#
+```csharp
         private void listView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             //welches Essen wurde ausgewählt?
@@ -665,7 +665,7 @@ Bei einem Doppelklick soll sich dieses Fenster öffnen. Die Daten müssen von de
 Einteilen in Zeilen und Spalten 5 Reihen und 2 Spalten 
 
 In der FensterBestellung.xaml.cs Tragen wir folgendes ein:
-```C#
+```csharp
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -696,7 +696,7 @@ Anschliesend Ist das Fenster Bestellen wir folgt aufgeteilt:
 Die zwei Button Bestellen und Abbrechen bekommen Ihre funktion:
 
 **Abbrechen**
-```C#
+```csharp
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             //wir senden an das Hauptfenster, dass der Button "Abbrechen" geklickt wurde
@@ -706,7 +706,7 @@ Die zwei Button Bestellen und Abbrechen bekommen Ihre funktion:
 ```
 
 **Bestellung**
-```C#
+```csharp
         private async void btnOk_Click(object sender, RoutedEventArgs e)
         {
             //Bestellung in Datenbank eintragen

@@ -31,7 +31,7 @@
 
 ## Schleifen
 ### Kopfgesteuerte Schleife
-```c#
+```csharp
 int index = 0;
 while(index<4)
 {
