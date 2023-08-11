@@ -1,4 +1,6 @@
 # Java-projekt
+## Entwurf
+![Alt text](./img/entwurf_personal.png)
 
 ## Anforderung
 SQl-Datenbank
