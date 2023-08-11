@@ -108,3 +108,34 @@ print $json;
 //Ausgabe $json-Text
 ?>
 ```
+
+### Update
+
+```php
+<?php
+//Daten abholen mit $_REQUEST
+$id = $_REQUEST["id"];
+$gehalt = $_REQUEST["gehalt"];
+
+//Verbinden zum Server - Datenbank personal
+$conny = new mysqli("localhost", "root", "" , "personal");
+
+//SQL
+$sql = "update mitarbeiter set gehalt = ? where id = ?";
+
+//SQL preparieren
+$stmt = $conny->prepare($sql);
+
+//Parameter festlegen
+$stmt->bind_param("di", $gehalt, $id);
+
+//Ausführen statement
+$stmt->execute();
+
+//Ausgabe wie viele Zeilen betroffen
+print $conny->affected_rows;
+
+//Datenbank schließen
+
+?>
+```
