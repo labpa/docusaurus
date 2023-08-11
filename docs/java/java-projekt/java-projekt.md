@@ -179,6 +179,11 @@ print $conny->affected_rows;
 
 
 ## Mitarbeiter
++ Eigenschaften
++ Konstruktor
++ Getter und Setter
++ Überschreiben to String
+
 ```java
 package personal;
 
