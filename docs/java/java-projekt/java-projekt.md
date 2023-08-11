@@ -170,7 +170,7 @@ print $conny->affected_rows;
 ```
 
 ## Java
-## Projekt erstellen
+### Projekt erstellen
 + neues JavaProject in Oracle  -> ConsolePersonal
 + zwei packages erstellen 
     + personal
@@ -178,7 +178,7 @@ print $conny->affected_rows;
 + Class erstellen personal -> Mitarbeiter
 
 
-## Mitarbeiter
+### Mitarbeiter
 + Eigenschaften
 + Konstruktor
 + Getter und Setter
@@ -245,5 +245,42 @@ public class Mitarbeiter {
 
 }
 ```
+
+### Skript getAll()
+```java
+//Skript getAll()
+	public static Mitarbeiter[] getAll() throws IOException
+	{
+		Mitarbeiter[] liste = null;
+		
+		 String json = null;
+		 
+		//Verbindung Server
+		URL url = new URL("http://localhost/personal/getAll.php");
+		
+		//Öffnen Verbindung zu php-skript
+		HttpURLConnection conny = (HttpURLConnection) url.openConnection();
+		BufferedReader br =  new BufferedReader(new InputStreamReader(conny.getInputStream()));
+		
+		json = br.readLine();
+		Gson gs = new Gson();
+		
+		liste = gs.fromJson(json,  Mitarbeiter[].class);
+		
+		//Skript ausführen
+		
+		//Datenstrom verwenden für Auslesen der Rückgabe (JSON von php)
+		
+		//JSON umwandeln in liste
+		
+		//Schließen Datenstrom
+		conny.disconnect();
+		//Schließen Verbindung Server
+		
+		return liste;
+		
+	}
+```
+
 
 
