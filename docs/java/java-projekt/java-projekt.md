@@ -246,7 +246,7 @@ public class Mitarbeiter {
 }
 ```
 
-### Skript getAll()
+### Funktion getAll()
 ```java
 //Skript getAll()
 	public static Mitarbeiter[] getAll() throws IOException
@@ -280,6 +280,94 @@ public class Mitarbeiter {
 		return liste;
 		
 	}
+```
+
+### Funktion update
+
+```java
+	public static boolean update(int id, double gehalt) throws IOException
+	{
+		//Verbinden Server
+		URL url = new URL("http://localhost/personal/update.php?id=" + id +"&gehalt=" + gehalt);
+		//datenstrom für Lesen der Rückgabe aus php
+		HttpURLConnection conny = (HttpURLConnection) url.openConnection();
+		BufferedReader br =  new BufferedReader(new InputStreamReader(conny.getInputStream()));
+		
+		//Rückgabe Speichern in Variablen -- String
+		String rueckgabe = br.readLine();
+		int zeilen = Integer.parseInt(rueckgabe);
+		//Alles schließen
+		conny.disconnect();
+		br.close();
+		
+		//Wenn rückgabe > 0
+		if(zeilen > 0  )
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+```
+
+### Funktion delete
+```java
+	public static boolean delete(int id) throws IOException
+	{
+		//Verbinden Server
+		URL url = new URL("http://localhost/personal/delete.php?id="+id);
+		//datenstrom für Lesen der Rückgabe aus php
+		HttpURLConnection conny = (HttpURLConnection) url.openConnection();
+		BufferedReader br =  new BufferedReader(new InputStreamReader(conny.getInputStream()));
+		
+		//Rückgabe Speichern in Variablen -- String
+		String rueckgabe = br.readLine();
+		int zeilen = Integer.parseInt(rueckgabe);
+		//Alles schließen
+		conny.disconnect();
+		br.close();
+		
+		//Wenn rückgabe > 0
+		if(zeilen > 0  )
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+```
+
+### Programm - Main
+```java
+package test;
+
+import java.io.IOException;
+
+import personal.Funktionen;
+import personal.Mitarbeiter;
+
+public class Programm {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Mitarbeiter[] liste = Funktionen.getAll();
+		for(Mitarbeiter m:liste)
+		{
+			System.out.println(m);
+		}
+		
+		boolean geht = Funktionen.update(3, 7500);
+		System.out.println("Update? " + geht);
+		
+		geht= Funktionen.delete(2);
+		System.out.println("Delete? " + geht);
+	}
+}
 ```
 
 
