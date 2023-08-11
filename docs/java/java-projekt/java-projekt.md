@@ -13,6 +13,14 @@ SQl-Datenbank
 + Eintragen von 5 Datensätzen     
 
 ## SQL-Datenbank
+### SQL loggen
++ erstellt eine Datei im angegebenen Pfad
++ loggt die Anweisungen
+
+```sql
+tee c:/dateien/log_personal.sql
+```
+
 ### Erstellen der Datenbank
 ```sql
 create database personal;
@@ -40,4 +48,63 @@ insert into mitarbeiter (nachname, gehalt, anmerkung) values ("Berger", 4950.20,
 ### Alles anzeigen lassen
 ```sql
 select * from mitarbeiter;
+```
+
+### Anmerkung
+```sql
+set autocommit = 0;
+```
+
++ Rückgängig machen
+
+```sql
+rollback;
+```
+```sql
+set autocommit = 1;
+```
+
+## PHP
+### Ordner erstellen
++ Erstellen eines Ordners Personal in -> C:/xampp/htdocs/personal
++ für jede Funktion brauchen wir 1 Php-Skript
+
+### get all
+```php
+<?php
+//Verbinden zum Server - Datenbank personal
+$conny = new mysqli("localhost", "root", "" , "personal");
+
+//SQL erstellen
+$sql = "select * from mitarbeiter";
+
+//Statement erstellen
+$stmt = $conny->query($sql);
+
+//Stmt ausführen und Speichern ResultSet
+$zeile = $stmt->fetch_assoc();
+
+//wir erstellen ein Array
+$daten = array();
+
+while($zeile ==true)
+{
+	array_push($daten, $zeile);
+	
+	$zeile = $stmt->fetch_assoc();
+}
+
+$conny->close();
+
+$json = json_encode($daten);
+print $json;
+
+//1. Zeile holen
+//Solange zeile != null
+	//Zeile dem Array $daten hinzufügen
+	//nächste Zeile holen
+//array in einen json-Text umwandeln
+//Datenbank schließen
+//Ausgabe $json-Text
+?>
 ```
