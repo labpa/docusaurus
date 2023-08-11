@@ -139,3 +139,106 @@ print $conny->affected_rows;
 
 ?>
 ```
+
+### Löschen
+```php
+<?php
+//Daten abholen mit $_REQUEST
+$id = $_REQUEST["id"];
+
+//Verbinden zum Server - Datenbank personal
+$conny = new mysqli("localhost", "root", "" , "personal");
+
+//SQL
+$sql = "delete from mitarbeiter where id = ?";
+
+//SQL preparieren
+$stmt = $conny->prepare($sql);
+
+//Parameter festlegen
+$stmt->bind_param("i", $id);
+
+//Ausführen statement
+$stmt->execute();
+
+//Ausgabe wie viele Zeilen betroffen
+print $conny->affected_rows;
+
+//Datenbank schließen
+
+?>
+```
+
+## Java
+## Projekt erstellen
++ neues JavaProject in Oracle  -> ConsolePersonal
++ zwei packages erstellen 
+    + personal
+    + test
++ Class erstellen personal -> Mitarbeiter
+
+
+## Mitarbeiter
+```java
+package personal;
+
+public class Mitarbeiter {
+	//Eigenschaften
+	public int id;
+	public String nachname;
+	public double gehalt;
+	public String anmerkung;
+	
+	//Konstruktor
+	public Mitarbeiter(int id, String nachname, double gehalt, String anmerkung) {
+		super();
+		this.id = id;
+		this.nachname = nachname;
+		this.gehalt = gehalt;
+		this.anmerkung = anmerkung;
+	}
+
+	//Getter und Setter
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNachname() {
+		return nachname;
+	}
+
+	public void setNachname(String nachname) {
+		this.nachname = nachname;
+	}
+
+	public double getGehalt() {
+		return gehalt;
+	}
+
+	public void setGehalt(double gehalt) {
+		this.gehalt = gehalt;
+	}
+
+	public String getAnmerkung() {
+		return anmerkung;
+	}
+
+	public void setAnmerkung(String anmerkung) {
+		this.anmerkung = anmerkung;
+	}
+
+	//Überschreiben to String
+	@Override
+	public String toString() {
+		return "Mitarbeiter [id=" + id + ", nachname=" + nachname + ", gehalt=" + gehalt + ", anmerkung=" + anmerkung
+				+ "]";
+	}
+
+}
+```
+
+
