@@ -132,3 +132,244 @@ select hotel.hid, titel, land, kategorie, preis, ausstattung from hotel inner jo
 ```sql
 select hid, titel, land from hotel where land="Deutschland";
 ```
+
+#### Ausgabe des Hotels mit einer ID
++ Was brauchen wir?
+    + id
++ Was ist Rückgabe?
+    + tabelle
+    + hid 
+    + titel 
+    + land 
+
+```sql
+select hid titel, titel, land from hotel where hid = 3;
+```
+
+#### Ausgabe aller Hotels mit Name
++ Was brauchen wir?
+    + name
++ Was ist Rückgabe?
+    + tabelle 
+    + hid
+    + titel
+    + kand
+
+```sql
+select hid, titel, land from hotel where titel like "%ad%";
+```
+
+#### Ausgabe aller Hotels mit einer Ausstattung
++ Was wir brauchen?
+    + die Ausstattung
++ Was ist Rückgabe?
+    + hid 
+    + titel 
+    + land 
+    + kategorie 
+    + preis 
+    + ausstattung
+
+```sql
+select hotel.hid, titel, land, kategorie, preis, ausstattung from hotel inner join zimmer on hotel.hid = zimmer.hid where ausstattung like"%safe%";
+```
+
+## Schnittstelle
+![Alt text](./img/Schnittstelle.png)
+
+### Java
++ Erstellen Projekt ConsoleUrlaub
++ Paket test
++ Paket urlaub
+    + Klasse Hotel
+    + Klasse Zimmer
+
+#### Klasse Hotel
++ private int hid
++ private String titel
++ private String land
+
+```java
+package urlaub;
+
+public class Hotel {
+	private int hid;
+	private String titel;
+	private String land;
+	
+	public Hotel(int hid, String titel, String land) {
+		super();
+		this.hid = hid;
+		this.titel = titel;
+		this.land = land;
+	}
+
+	public int getHid() {
+		return hid;
+	}
+
+	public void setHid(int hid) {
+		this.hid = hid;
+	}
+
+	public String getTitel() {
+		return titel;
+	}
+
+	public void setTitel(String titel) {
+		this.titel = titel;
+	}
+
+	public String getLand() {
+		return land;
+	}
+
+	public void setLand(String land) {
+		this.land = land;
+	}
+
+	@Override
+	public String toString() {
+		return "Hotel [hid=" + hid + ", titel=" + titel + ", land=" + land + "]";
+	}
+}
+```
+#### Klasse Zimmer
+```java
+package urlaub;
+
+public class Zimmer {
+	private int hid;
+	private String kategorie;
+	private double preis;
+	private String ausstattung;
+	
+	public Zimmer(int hid, String kategorie, double preis, String ausstattung) {
+		super();
+		this.hid = hid;
+		this.kategorie = kategorie;
+		this.preis = preis;
+		this.ausstattung = ausstattung;
+	}
+
+	public int getHid() {
+		return hid;
+	}
+
+	public void setHid(int hid) {
+		this.hid = hid;
+	}
+
+	public String getKategorie() {
+		return kategorie;
+	}
+
+	public void setKategorie(String kategorie) {
+		this.kategorie = kategorie;
+	}
+
+	public double getPreis() {
+		return preis;
+	}
+
+	public void setPreis(double preis) {
+		this.preis = preis;
+	}
+
+	public String getAusstattung() {
+		return ausstattung;
+	}
+
+	public void setAusstattung(String ausstattung) {
+		this.ausstattung = ausstattung;
+	}
+
+	@Override
+	public String toString() {
+		return "Zimmer [hid=" + hid + ", kategorie=" + kategorie + ", preis=" + preis + ", ausstattung=" + ausstattung
+				+ "]";
+	}
+}
+```
+
+#### Klasse Hotzi
+```java
+package urlaub;
+
+public class Hotzi {
+	
+	private int hid;
+	private String titel;
+	private String land;
+	private String kategorie;
+	private double preis;
+	private String ausstattung;
+	
+	public Hotzi(int hid, String titel, String land, String kategorie, double preis, String ausstattung) {
+		super();
+		this.hid = hid;
+		this.titel = titel;
+		this.land = land;
+		this.kategorie = kategorie;
+		this.preis = preis;
+		this.ausstattung = ausstattung;
+	}
+
+	public int getHid() {
+		return hid;
+	}
+
+	public void setHid(int hid) {
+		this.hid = hid;
+	}
+
+	public String getTitel() {
+		return titel;
+	}
+
+	public void setTitel(String titel) {
+		this.titel = titel;
+	}
+
+	public String getLand() {
+		return land;
+	}
+
+	public void setLand(String land) {
+		this.land = land;
+	}
+
+	public String getKategorie() {
+		return kategorie;
+	}
+
+	public void setKategorie(String kategorie) {
+		this.kategorie = kategorie;
+	}
+
+	public double getPreis() {
+		return preis;
+	}
+
+	public void setPreis(double preis) {
+		this.preis = preis;
+	}
+
+	public String getAusstattung() {
+		return ausstattung;
+	}
+
+	public void setAusstattung(String ausstattung) {
+		this.ausstattung = ausstattung;
+	}
+
+	@Override
+	public String toString() {
+		return "Hotzi [hid=" + hid + ", titel=" + titel + ", land=" + land + ", kategorie=" + kategorie + ", preis="
+				+ preis + ", ausstattung=" + ausstattung + "]";
+	}
+}
+```
+
+
+
