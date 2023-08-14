@@ -177,14 +177,14 @@ select hotel.hid, titel, land, kategorie, preis, ausstattung from hotel inner jo
 ## Schnittstelle
 ![Alt text](./img/Schnittstelle.png)
 
-### Java
+## Java
 + Erstellen Projekt ConsoleUrlaub
 + Paket test
 + Paket urlaub
     + Klasse Hotel
     + Klasse Zimmer
 
-#### Klasse Hotel
+### Klasse Hotel
 + private int hid
 + private String titel
 + private String land
@@ -234,7 +234,7 @@ public class Hotel {
 	}
 }
 ```
-#### Klasse Zimmer
+### Klasse Zimmer
 ```java
 package urlaub;
 
@@ -292,7 +292,7 @@ public class Zimmer {
 }
 ```
 
-#### Klasse Hotzi
+### Klasse Hotzi
 ```java
 package urlaub;
 
@@ -370,7 +370,7 @@ public class Hotzi {
 	}
 }
 ```
-#### Klasse Schnitti - Schnittstelle
+### Klasse Schnitti - Schnittstelle
 
 ```java
 package urlaub;
@@ -559,7 +559,7 @@ public class Schnitti {
 }
 ```
 
-#### Klasse Programm -Main
+### Klasse Programm -Main
 ```java
 package test;
 import java.sql.SQLException;
