@@ -370,6 +370,247 @@ public class Hotzi {
 	}
 }
 ```
+#### Klasse Schnitti - Schnittstelle
+
+```java
+package urlaub;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+public class Schnitti {
+	
+	private static String url = "jdbc:mysql://localhost:3306/urlaub";
+	private static String user = "root";
+	private static String pwd = "";
+	
+	private static ArrayList<Hotel> getSelect(String sql) throws SQLException
+	{
+
+		ArrayList<Hotel> liste = new ArrayList<>();
+		Connection conny = DriverManager.getConnection(url, user, pwd);
+		
+		Statement stmt = conny.createStatement();
+		ResultSet set = stmt.executeQuery(sql);
+		
+		while(set.next())
+		{
+			liste.add( new Hotel(set.getInt(1), set.getString(2), set.getString(3)));
+		}
+		set.close();
+		conny.close();
+		return liste;	
+		
+	}
+	
+	
+	private static ArrayList<Hotel> getSelectPrepare(String sql, String text) throws SQLException
+	{
+
+		ArrayList<Hotel> liste = new ArrayList<>();
+		Connection conny = DriverManager.getConnection(url, user, pwd);
+		
+		PreparedStatement stmt = conny.prepareStatement(sql);
+		stmt.setString(1, text);
+		
+		ResultSet set = stmt.executeQuery();
+		
+		while(set.next())
+		{
+			liste.add( new Hotel(set.getInt(1), set.getString(2), set.getString(3)));
+		}
+		set.close();
+		conny.close();
+		return liste;
+		
+	}
+	
+	
+	
+	
+	
+	public static ArrayList<Hotel> getAll() throws SQLException
+	{
+		return getSelect("select hid, titel, land from hotel");
+	}
+	
+	public static Hotel getId(int id) throws SQLException
+	{
+		ArrayList<Hotel> erg = getSelect("select hid, titel, land from hotel where hid = " + id);
+		//wenn id gefunden 
+		if(erg.size()== 1)
+		{
+			return erg.get(0);
+		}
+		else
+		{
+			return null;
+		}
+	}
+	
+	public static ArrayList<Hotel> getLand(String land) throws SQLException
+	{
+		return getSelectPrepare("select hid, titel, land from hotel where land =?", land );
+	}
+	
+	
+	public static ArrayList<Hotel> getName(String titel) throws SQLException
+	{
+		return getSelectPrepare("select hid, titel, land from hotel where titel like?","%"+titel+"%");
+	}
+	
+	//----------------------------------------------------------------------------------------------------------------------------
+	private static ArrayList<Hotzi> getSelectHotzi(String sql) throws SQLException
+	{
+
+		ArrayList<Hotzi> liste = new ArrayList<>();
+		Connection conny = DriverManager.getConnection(url, user, pwd);
+		
+		Statement stmt = conny.createStatement();
+		ResultSet set = stmt.executeQuery(sql);
+		
+		while(set.next())
+		{
+			liste.add( new Hotzi(set.getInt(1), set.getString(2), set.getString(3), set.getString(4), set.getDouble(5), set.getString(6)));
+		}
+		set.close();
+		conny.close();
+		return liste;
+		
+	}
+	
+	
+	
+	public static ArrayList<Hotzi> getGesamt() throws SQLException
+	{
+		//Ausgabe alles Hotels inkl. Zimmer
+		return getSelectHotzi("select hotel.hid, titel, land, kategorie, preis, ausstattung from hotel inner join zimmer on hotel.hid = zimmer.hid");
+	}
+	
+	public static ArrayList<Hotzi> getAusstattung(String was) throws SQLException
+	{
+		//Ausgabe aller Hotels mit einer Ausstattung 
+		ArrayList<Hotzi> liste = new ArrayList<>();
+		Connection conny = DriverManager.getConnection(url, user, pwd);
+		String sql = "select hotel.hid, titel, land, kategorie, preis, ausstattung from hotel inner join zimmer on hotel.hid = zimmer.hid where ausstattung like?";
+		PreparedStatement stmt = conny.prepareStatement(sql);
+		stmt.setString(1, "%"+was+"%");
+		ResultSet  set = stmt.executeQuery();
+		while(set.next())
+		{
+			liste.add( new Hotzi(set.getInt("hid"), set.getString("titel"), set.getString("land"), set.getString("kategorie"), set.getDouble("preis"), set.getString("ausstattung")));
+		}
+		set.close();
+		conny.close();
+		return liste;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* public static ArrayList<Hotel> getAll() throws SQLException
+	{
+		ArrayList<Hotel> liste = new ArrayList<>();
+		Connection conny = DriverManager.getConnection(url, user, pwd);
+		
+		String sql = "select hid, titel, land, land from hotel";
+		
+		Statement stmt = conny.createStatement();
+		ResultSet set = stmt.executeQuery(sql);
+		
+		while(set.next())
+		{
+			liste.add( new Hotel(set.getInt(1), set.getString(2), set.getString(3)));
+		}
+		set.close();
+		conny.close();
+		return liste;
+	}
+	
+	/*public static Hotel getID(int id)
+	{
+		ArrayList<Hotel> liste = new ArrayList<>();
+		Connection conny = DriverManager.getConnection(url, user, pwd);
+		
+		String sql = "select hid, titel, land, land from hotel where id =" + id;
+		
+		Statement stmt = conny.createStatement();
+		ResultSet set = stmt.executeQuery(sql);
+		
+		while(set.next())
+		{
+			liste.add( new Hotel(set.getInt(1), set.getString(2), set.getString(3)));
+		}
+		set.close();
+		conny.close();
+		return liste;
+	}
+	*/
+}
+```
+
+#### Klasse Programm -Main
+```java
+package test;
+import java.sql.SQLException;
+
+import urlaub.*;
+public class Programm {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		
+		for (Hotel h:Schnitti.getAll()) 
+		{
+			System.out.println(h);
+		}
+		
+		System.out.println("----------");
+		
+		System.out.println(Schnitti.getId(1));
+		System.out.println(Schnitti.getId(11));
+		
+		System.out.println("----------");
+		
+		for(Hotel h: Schnitti.getLand("Spanien"))
+		{
+			System.out.println(h);
+		}
+		
+		System.out.println("----------");
+		
+		for(Hotel h: Schnitti.getName("Per"))
+		{
+			System.out.println(h);
+		}
+		
+		System.out.println("----------");
+		for(Hotzi h: Schnitti.getGesamt())
+		{
+			System.out.println(h);
+		}
+		
+		System.out.println("----------");
+		
+
+		for(Hotzi h: Schnitti.getAusstattung("Safe"))
+		{
+			System.out.println(h);
+		}	
+	}
+}
+
+```
 
 
 
