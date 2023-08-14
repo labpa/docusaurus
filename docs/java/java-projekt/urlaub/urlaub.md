@@ -29,6 +29,7 @@ alter table zimmer add foreign key (hid) references hotel(hid) on delete cascade
 ```sql
 insert into hotel (titel, land) values ("Seeperle", "Deutschland");
 ```
+#### Datensatz
 |titel|land|
 |---|---|
 |Seeperle|Deutschland|
@@ -36,8 +37,9 @@ insert into hotel (titel, land) values ("Seeperle", "Deutschland");
 |Baude auf der Alm|Schweiz|
 |Die Bettenbox|Spanien|
 
+#### alles Tabelle Hotel
 ```sql
-select * from zimmer;
+select * from hotel;
 ```
 ![Alt text](./img/abfrageHotel.PNG)
 
@@ -46,6 +48,7 @@ select * from zimmer;
 insert into zimmer values (1, "Standard", 69.99, "Bergblick, Fernseher, Safe");
 ```
 
+#### Datensatz
 |hid|kategorie|preis|ausstattung|
 |---|---|---|---|
 |1|Deluxe|89.99|Meerblick, Fernseher, Safe, Balkon|
@@ -55,4 +58,8 @@ insert into zimmer values (1, "Standard", 69.99, "Bergblick, Fernseher, Safe");
 |3|Standard|99.99|Fernseher, Safe, Minibar|
 |4|Standard|39.99|Fernseher|
 
+#### alles Tabelle Zimmer
+```sql
+select * from zimmer;
+```
 ![Alt text](./img/abfrageZimmer.PNG)
