@@ -612,5 +612,43 @@ public class Programm {
 
 ```
 
+## FinalUrlaub
+### Erstellen
++ Importieren Lib 
+
++ JSP File -> alleHotels.jsp
+
+### Treiber für SQL-Server laden
+```java
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		//Wir müssen den Treiber für den MySQL-Server laden
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			ArrayList<Hotel> alle = Schnitti.getAll();
+			
+			if(alle.size() >0)
+			{
+				request.setAttribute("liste", alle);
+				request.getRequestDispatcher("/alleHotels.jsp").forward(request, response);
+			}
+			else
+			{
+				response.getWriter().append("keine Hotels vorhanden :(");
+			}
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			response.getWriter().append("Treiber nicht gefunden").append(e.getMessage());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			response.getWriter().append("Fehler in SQL: ").append(e.getMessage());
+		} 
+	}
+```
+
+
 
 
