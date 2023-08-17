@@ -83,7 +83,7 @@
 
 ![Alt text](./img/pseudocodeBubble.png)
 
-### Code Bubble Sort
+### Code Bubble Sort - Aufsteigende Sortierung
 ```java
 public static void BubbleSort(List<Integer> liste)
 	{
@@ -104,7 +104,7 @@ public static void BubbleSort(List<Integer> liste)
 	}
 ```
 
-### Unit-Test Bubble Sort
+#### Unit-Test Bubble Sort
 ```java
 @Test
 	void testBubble() {
@@ -123,6 +123,26 @@ public static void BubbleSort(List<Integer> liste)
 		Sort.BubbleSort(liste);
 		
 		Assert.assertEquals(liste,  erwartet);
+	}
+```
+### Code Bubble Sort - Absteigend Sortiert
+```java
+	public static void BubbleSortDown(List<Integer> liste)
+	{
+		int anzahl = liste.size();
+		
+		for(int zahl = anzahl -1; zahl > 0; zahl--)
+		{
+			for(int index = 0; index < zahl; index++)
+			{
+				if(liste.get(index) < liste.get(index+1))
+				{
+					int temp = liste.get(index);
+					liste.set(index, liste.get(index+1));
+					liste.set(index+1,  temp);
+				}
+			}
+		}
 	}
 ```
 
@@ -164,7 +184,49 @@ public static void BubbleSort(List<Integer> liste)
 ```
 
 ### Avg
+#### Avg - lange Version
 ```java
+	public static double Avg(List<Integer> liste)
+	{
+		double avg = 0;
+		double sum = 0;
+		int anzahl = liste.size();
+		
+		//Summe aller werte
+		for(int i = 0; i < anzahl; i++)
+		{
+			sum = sum + liste.get(i);
+		}
+		
+		//geteilt durch anzahl werte
+		avg = sum / anzahl;
+		
+		return avg;
+	}
+```
+
+#### Summe
+```java
+	public static int Sum(List<Integer> liste)
+	{
+		int anzahl = liste.size();
+		int sum = 0;
+		
+		for(int i = 0; i < anzahl; i++)
+		{
+			sum = sum + liste.get(i);
+		}
+		
+		return sum;
+	}
+```
+
+#### Avg2 - Aufruf mit Funktion Sum
+```java
+	public static double Avg2(List<Integer> liste)
+	{
+		 return Sum(liste) / liste.size();
+	}
 ```
 
 
