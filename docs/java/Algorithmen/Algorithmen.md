@@ -83,4 +83,88 @@
 
 ![Alt text](./img/pseudocodeBubble.png)
 
+### Code Bubble Sort
+```java
+public static void BubbleSort(List<Integer> liste)
+	{
+		int anzahl = liste.size();
+		
+		for(int zahl = anzahl -1; zahl > 0; zahl--)
+		{
+			for(int index = 0; index < zahl; index++)
+			{
+				if(liste.get(index) > liste.get(index+1))
+				{
+					int temp = liste.get(index);
+					liste.set(index, liste.get(index+1));
+					liste.set(index+1,  temp);
+				}
+			}
+		}
+	}
+```
+
+### Unit-Test Bubble Sort
+```java
+@Test
+	void testBubble() {
+		List<Integer> liste = new ArrayList<Integer>();
+		liste.add(23);
+		liste.add(12);
+		liste.add(99);
+		liste.add(67);
+		
+		List<Integer> erwartet = new ArrayList<>();
+		erwartet.add(12);
+		erwartet.add(23);
+		erwartet.add(67);
+		erwartet.add(99);
+		
+		Sort.BubbleSort(liste);
+		
+		Assert.assertEquals(liste,  erwartet);
+	}
+```
+
+## Rechnen
+### Maxi
+```java
+	public static int Maxi(List<Integer> liste)
+	{
+		// [1, 2, 3, 9 ,3 ]
+		int maxi = Integer.MIN_VALUE;
+		
+		for (int current: liste)
+		{
+			if(maxi < current)
+			{
+				maxi = current;
+			}
+		}
+		return maxi;
+	}
+```
+
+### Mini
+```java
+	public static int Mini(List<Integer> liste)
+	{
+		// [23, 12, 99, 67 ]
+		int mini = Integer.MAX_VALUE;
+		
+		for (int current: liste)
+		{
+			if(mini > current)
+			{
+				mini = current;
+			}
+		}
+		return mini;
+	}
+```
+
+### Avg
+```java
+```
+
 
