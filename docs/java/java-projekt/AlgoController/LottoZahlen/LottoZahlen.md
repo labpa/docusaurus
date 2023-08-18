@@ -3,16 +3,31 @@
 ## Code
 ### Main
 ```java
+package programm;
+
+import spielen.Play;
+
+public class Start {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
 		int[] geratenNummern = Play.Eingabe();
 		System.out.print("Ihre Zahlen: ");
 		Play.printArray(geratenNummern);
 		
 		int[] zufallLottoZahlen = Play.ZufallLottoZahlen();
 		System.out.print("Die Lottozahlen: ");
-		Play.printArray(zufallLottoZahlen );
+		Play.printArray(zufallLottoZahlen );	
+		
+		int count = Play.vergleichen(geratenNummern, zufallLottoZahlen);
+		System.out.println("Anzahl Richtige: "+ count);
+		
+		
+		Play.printGewinne(count);
+	}
+}
 
-        System.out.print("Anzahl Richtige: ");
-		Play.vergleichen(geratenNummern, zufallLottoZahlen);
 ```
 
 
@@ -94,5 +109,33 @@
 			}
 		}
 		System.out.println(count);
+	}
+```
+
+### print Gewinne
+```java
+	public static void printGewinne(int count)
+	{
+		System.out.println(count);
+		if(count < 3)
+		{
+			System.out.println("Kein Gewinn");
+		}
+		else if ( count == 3)
+		{
+			System.out.println("Gutschein für Baumarkt");
+		}
+		else if( count == 4)
+		{
+			System.out.println("kleine Topfpflanze");
+		}
+		else if( count == 5)
+		{
+			System.out.println("große Topfpflanze");
+		}
+		else
+		{
+			System.out.println("ein Eimer Kohle");
+		}
 	}
 ```
