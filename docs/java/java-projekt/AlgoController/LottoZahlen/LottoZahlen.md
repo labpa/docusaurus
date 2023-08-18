@@ -1,0 +1,84 @@
+# Lotto Zahlen
+
+## Code
+### Main
+```java
+		int[] geratenNummern = Play.Eingabe();
+		System.out.print("Ihre Zahlen: ");
+		Play.printArray(geratenNummern);
+		
+		int[] zufallLottoZahlen = Play.ZufallLottoZahlen();
+		System.out.print("Die Lottozahlen: ");
+		Play.printArray(zufallLottoZahlen );
+```
+
+
+### Eingabe Zahlen
+```java
+//Eingabe der Zahlen
+	
+	public static int[] Eingabe()
+	{
+		Scanner scn = new Scanner(System.in);
+		int arrayGroesse = 6;
+		int[] ergebnis1 = new int[arrayGroesse];
+		for(int i = 0; i< ergebnis1.length; i++)
+		{
+			ergebnis1[i] = begrenzungEingabe(scn, i+1);
+		}
+		scn.close();
+		return ergebnis1;
+	}
+```
+
+### Zufall Lotto Zahlen
+```java
+	public static int[] ZufallLottoZahlen()
+	{
+		Random rnd = new Random();
+		int arrayGroesse = 6;
+		int[] ergebnis1 = new int[arrayGroesse];
+		for(int i = 0; i< ergebnis1.length; i++)
+		{
+			ergebnis1[i] = rnd.nextInt(49)+1;
+		}
+	
+		return ergebnis1;
+	}
+```
+
+### begrenzung Eingabe
+```java
+	public static int begrenzungEingabe(Scanner scn, int zahl )
+	{
+		while(true)
+		{
+			System.out.println(zahl + " Zahl:");
+			int eingabe = scn.nextInt();
+			if(eingabe > 0 && eingabe < 50 )
+			{
+				return eingabe;
+			}
+		}
+	}
+```
+### print Array
+```java
+	public static void printArray(int[] ergebnis1)
+	{
+		System.out.print("{ ");
+		for(int nummer: ergebnis1)
+		{
+			System.out.print(nummer +  " ");
+		}
+		System.out.println("}");
+	}
+```
+
+### Vergleichen Array
+```java
+	public static void vergleichen(int[] lottozahlen, int[] meinezahlen)
+	{
+		
+	}
+```
