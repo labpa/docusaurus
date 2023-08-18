@@ -10,6 +10,9 @@
 		int[] zufallLottoZahlen = Play.ZufallLottoZahlen();
 		System.out.print("Die Lottozahlen: ");
 		Play.printArray(zufallLottoZahlen );
+
+        System.out.print("Anzahl Richtige: ");
+		Play.vergleichen(geratenNummern, zufallLottoZahlen);
 ```
 
 
@@ -79,6 +82,17 @@
 ```java
 	public static void vergleichen(int[] lottozahlen, int[] meinezahlen)
 	{
-		
+		int count = 0;
+		for(int i=0; i<=5; i++)
+		{
+			for (int j= 0; j<5; j++)
+			{
+				if(lottozahlen[i] == meinezahlen[j])
+				{
+					count ++;
+				}
+			}
+		}
+		System.out.println(count);
 	}
 ```
