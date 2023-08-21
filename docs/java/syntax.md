@@ -27,6 +27,15 @@ public class Programm {
 
 ```
 
+
+## Syntaxregeln
++ Klassennamen, Enum und Schnittstellen beginnen mit einem Großbuchstaben
++ Namen von Variablen, Methoden und Parametern beginnen mit einem Kleinbuchstaben
++ Konstante ausschließlich Großbuchstaben
+
+
+
+
 ## Funktion
 ```java
 public static void beispiel4() // Funktion
