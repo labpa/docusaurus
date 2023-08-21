@@ -57,8 +57,9 @@ Ipv6: ::1
 + Lokal oder Internet
 + FQDN - Fully Qualified Domain Name
 + Top Level Domain (TLD)  
+
 |Geo|Organisatorische|
-|---|---|
+|:---:|:---:|
 |de|com|
 |at|net|
 |ch|biz|
