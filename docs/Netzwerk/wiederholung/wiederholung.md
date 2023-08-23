@@ -66,3 +66,28 @@ Ipv6: ::1
 |fr|org|
 |us|net|
 |tv|info|
+
+## Kabel
+|Lichtwellenleiter|Metallischeleiter|Freiraumübertragung|
+|---|---|---|
+
+Twisted Pair -> mindestens zwei isolierte adern umeinenader geschwungen werden. In modernen Kabeln verdrillt. Stecker RJ45
+
+|Cat|Geschwindigkeit|Frequenz|Verwendung/Standard|
+|---|---|---|---|
+|3||||
+|4||||
+|5||||
+|5e||||
+|6||||
+|6a||||
+|7|||
+|7a|||
+|8|||
+
+|Monomode / Singlemode| Multimode|
+|---|---|
+|Kern deutlich kleiner|Einsatz bis zum Host|
+|Teurer|Kürzere Distanzen|
+|Laser||
+|Längere Distanz||
