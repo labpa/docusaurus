@@ -12,4 +12,5 @@
 |C|192.168.0.0|||
 
 ## IPv6
+![Alt text](./img/SubnettingIPv6.png)
 
