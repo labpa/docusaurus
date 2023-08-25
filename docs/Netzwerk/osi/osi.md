@@ -89,3 +89,16 @@
 + EIA/TIA 232
 + RJ45
 + NRZ
+
+
+
+## Tabelle
+|Nr.|Schicht|Protokoll|Aufgabe|Kopplungselemente|
+|---|---|---|---|---|
+|7|Anwendungsschicht|HTTP, SMTP, FTP|Funktionen für -Anwendungen - Dateneingabe und Ausgabe|Gateway, Proxy, Content-Switch, Layer 4-7 Switch|
+|6|Darstellungsschicht|HTTP, SMTP, FTP|Umwandlung der anforderungsabhängigen Daten in Standardformat|Gateway, Proxy, Content-Switch, Layer 4-7 Switch|
+|5|Sitzungsschicht|HTTP, SMTP, FTP|Steuerung der Verbindungen und des Datenaustauschs|Gateway, Proxy, Content-Switch, Layer 4-7 Switch|
+|4|Transportschicht|TCP, UDP, SPX|Zuordnung der Datenpakete zu einer Anwendung|Gateway, Proxy, Content-Switch, Layer 4-7 Switch|
+|3|Vermittlungsschicht|ICMP, IP, IPsec, IPX|Routing der Datenpakete zum nächsten Knoten|Router, Layer-3-Switch|
+|2|Sicherungsschicht|Ethernet, FDDI, MAC, ARCNET|Segmentierung der Pakete in Frames und Hinzufügen von Prüfsummen|Layer-2-Switch, Bridge|
+|1|Bitübertragungsschicht|Ethernet, FDDI, MAC, ARCNET|Umwandlung der Bits in ein zum Übertragungsmedium passendes Signal und physikalische Übertragung|Netzwerkkabel, Repeater, Hub|
