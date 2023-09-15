@@ -12,3 +12,7 @@ Seit September 2022 befinde Ich mich in einer zweijährigen Umschulung zum Fachi
  Mit freundlichen Grüßen  
 
  Pascal B
+
+ ## Zertifikate
+ ### Cisco - Introduction to Cybersecurity
+ ![Alt text](./img/introduction-to-cybersecurity.png)
