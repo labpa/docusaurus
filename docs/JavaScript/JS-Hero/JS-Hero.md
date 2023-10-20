@@ -293,3 +293,23 @@ function unequal(a, b, c){
  return eins && zwei && drei;
 }
 ```
+
+## Aufgabe 53 Arrays
+```js
+function toArray(eins, zwei){
+    return [eins, zwei];
+}
+```
+## Aufgabe 54 array-Elemente lesen
+```js
+function getFirstElement(eins){
+    return eins[0];
+}
+```
+## Aufgabe 55 Array-Elemente schreiben
+```js
+function SetFirstElement(eins, zwei){
+    eins[0] = zwei;
+    return eins;
+}
+```
