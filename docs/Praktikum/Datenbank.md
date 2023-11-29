@@ -84,3 +84,32 @@
 ### Aufgabe 4
 ![Alt text](./img/Aufgabe4.png)
 
+
+Gegeben sei die folgende Miniwelt der Krankenhäuser:
+
++ Es gibt **Krankenhäuser**, die eine eindeutige *Krankenhausnummer* haben, einen *Namen*, eine *Anschrift* und eine *feste Anzahl Betten*.
+
++ Krankenhäuser beschäftigen **Ärzte**. Diese haben einen *Namen*, eine *Personalnummer*, eine *Adresse* und ein *Fachgebiet*.
+
++ Ein Arzt betreut mehrere **Patienten**. Ein Patient hat einen *Namen*, ein *Geschlecht*, eine *Adresse*, ein *Geburtsdatum*, eine *Station* und eine *Patientennummer*.
+
++ Es gibt ausserdem **unabhängige Labore** mit eindeutiger *Labornummer*,*Namen*, *Anschrift* und *Telefonnummer*. Labore werden von Krankenhäusern 
+beauftragt.
+
++ In Laboren werden Tests durchgeführt. Diese Tests haben einen Testcode,einen Typ, einen Status und ein Datum. Tests werden an Proben von Patienten durchgeführt.
+
++ Krankenhäuser beschäftigen auch Krankenschwestern und Krankenpfleger. Diese haben einen Namen, eine Adresse, ein Geschlecht, eine Station, ein Alter und eine Personalnummer.
+
++ Die Zimmer eines Krankenhauses haben eine Zimmernummer und eine Bettenzahl.
+
++ Eine Krankenschwester ist immer für mehrere Zimmer zuständig.
+
++ Auf jedem Krankenzimmer liegen mehrere Patienten.
+Patienten leiden an einer oder mehreren Krankheiten. Eine Krankheit hat einen Namen, Symptome und einen Status.
+
++ Patienten nehmen mehrere Medikamente. Ein Medikament hat einen Namen, einen Preis, einen Bestand und einen Lieferanten.
+
++ Modelliere die Krankenhaus-Miniwelt mit Hilfe eines ER-Diagramms.
+
++ Übertrage anschließend die ER-Modellierung schrittweise in ein relationales Schema.
+
