@@ -52,6 +52,9 @@ const App = () => (
 );
 ```
 
+## React Props
+React properties (props) sind vergleichbar mit HTML Attributen. Eine prop wird einem React-Element oder einer React Komponente übergeben, in dem es in den öffnenden Tag gesetzt wird.
+
 
 ## Code
 ### App.tsx
