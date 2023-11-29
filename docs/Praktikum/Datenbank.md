@@ -74,4 +74,13 @@
 + Passwörter dürfen niemals  in einer unverschlüsselten Tabelle gespeichert werd
 + Passwörter niemals ohne es zu hashen speichern
 
+## ER-Diagramm Aufgaben
+### Aufgabe 1
+![Alt text](./img/Aufgabe1.png)
+### Aufgabe 2
+![Alt text](./img/Aufgabe2.png)
+### Aufgabe 3
+![Alt text](./img/Aufgabe3.png)
+### Aufgabe 4
+![Alt text](./img/Aufgabe4.png)
 
