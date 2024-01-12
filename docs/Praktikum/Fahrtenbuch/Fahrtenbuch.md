@@ -71,6 +71,23 @@ Zwischenstand Ausgabe der Liste unterhalb der Eingabe
   `yarn start`
   Runs the app in the development mode.\
   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
+## Dashboard
+
+
+
+## Navigation
+Um sich innerhalb der App bewegen zu können ist es notwendig die Navigation innerhalb der App zu ermöglichen. Dafür verwendet wurde  wurde react-router-dom 6.20.1
+### React-router-dom
++ Installation von react-router-dom
+    + `npm install react` 
+### Navbar
+
+## Speichern der Daten
+### Local Storage
+
+## Bearbeiten
+
 
 
 
